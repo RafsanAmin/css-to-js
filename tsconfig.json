@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "lib": ["es2016", "es6", "dom"],
+    "target": "es2017",
+    "baseUrl": "./lib",
+    "module": "CommonJS"
+  }
+}
