@@ -2,7 +2,7 @@ const cssToJs = (param: string) => {
   const lines = param
     .replace(/{}/g, '')
     .split(';')
-    .filter((s) => s.match(/^([\w\-]+:[+-=-*!@#$%^&*0-9,.()"'\-A-Za-z ]+)$/g));
+    .filter((s) => s.match(/^([\w\- ]+:[+-=-*!@#$%^&*0-9,.()"'\-A-Za-z ]+)$/g));
   const ret: string[] = [];
   console.log(lines);
   for (let a of lines) {
@@ -13,9 +13,8 @@ const cssToJs = (param: string) => {
       str.replace('-', '').toUpperCase()
     );
 
-    ret.push(newPropertyName + ': ' + property);
+    ret.push('  ' + newPropertyName.trim() + ': ' + property.trim());
   }
-  console.log(ret.join(',\n'));
   return ret.join(',\n');
 };
 
