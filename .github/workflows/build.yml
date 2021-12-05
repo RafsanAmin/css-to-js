@@ -26,9 +26,8 @@ jobs:
       - run: npm run export --if-present
       - run: touch ./out/.nojekyll
 
-
       - name: Deploy 🚀
-         uses: JamesIves/github-pages-deploy-action@4.1.7
-         with:
+        uses: JamesIves/github-pages-deploy-action@4.1.7
+        with:
           branch: gh-pages # The branch the action should deploy to.
           folder: build #
