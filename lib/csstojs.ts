@@ -1,8 +1,9 @@
 const cssToJs = (param: string) => {
   const lines = param
-    .replace(/{}/g, '')
+    .replace('\n', '')
     .split(';')
     .filter((s) => s.match(/^([\w\- ]+:[+-=-*!@#$%^&*0-9,.()"'\-A-Za-z ]+)$/g));
+  console.log(param);
   const ret: string[] = [];
   console.log(lines);
   for (let a of lines) {
@@ -15,7 +16,8 @@ const cssToJs = (param: string) => {
 
     ret.push('  ' + newPropertyName.trim() + ': ' + property.trim());
   }
+
   return ret.join(',\n');
 };
 
-module.exports = cssToJs;
+export default cssToJs;
