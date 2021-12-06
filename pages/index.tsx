@@ -1,3 +1,4 @@
+import Header from '@components/header';
 import type { NextPage } from 'next';
 import { useState } from 'react';
 import Button from '../components/button';
@@ -9,6 +10,7 @@ const Home: NextPage = () => {
   const [js, setJS] = useState<string>('');
   return (
     <>
+      <Header size={'lg'}>CSS to JS Converter</Header>
       <Textarea state={css} />
       <Button
         handler={() => {

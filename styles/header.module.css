@@ -1,0 +1,23 @@
+
+.header {
+  display: inline-block;
+}
+.header p {
+  margin: auto;
+  font-family: Ubuntu;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  background-image: linear-gradient(70deg, rgb(2, 51, 107), rgb(224, 0, 123));
+  background-clip: text;
+  color: transparent;
+}
+.lg {
+  font-size: 2.5rem;
+}
+.md {
+  font-size: 1.7rem;
+}
+.sm {
+  font-size: 1.2rem;
+}
