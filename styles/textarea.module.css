@@ -1,0 +1,13 @@
+.text_cont {
+  width: 100%;
+}
+.text_cont textarea {
+  width: 100%;
+  min-height: 300px;
+  resize: none;
+  font-size: 1rem;
+  font-family: 'fira code';
+  padding: 1rem;
+  overflow-x: scroll;
+  white-space: pre;
+}

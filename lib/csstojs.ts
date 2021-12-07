@@ -1,6 +1,6 @@
 const cssToJs = (param: string) => {
   const lines = param
-    .replace('\n', '')
+    .replaceAll('\n', '')
     .split(';')
     .filter((s) => s.match(/^([\w\- ]+:[+-=-*!@#$%^&*0-9,.()"'\-A-Za-z ]+)$/g));
   console.log(param);

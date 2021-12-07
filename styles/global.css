@@ -4,9 +4,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Jost';
 }
 .cont {
-  padding: 2rem;
   width: 100%;
-  max-width: 800px;
+  display: grid;
+  place-items: center;
+}
+.cont_inner {
+  width: 95%;
+  max-width: 900px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+.convert {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0;
+  gap: 10px;
+}
+@media only screen and (max-width: 720px) {
+  .convert {
+    display: flex;
+    flex-direction: column;
+  }
 }
