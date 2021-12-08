@@ -2,6 +2,7 @@
   width: 100%;
 }
 .text_cont textarea {
+  transition: 0.25s linear;
   width: 100%;
   min-height: 300px;
   resize: none;
@@ -10,4 +11,6 @@
   padding: 1rem;
   overflow-x: scroll;
   white-space: pre;
+  border: 1px solid lightgray;
+  border-radius: 10px;
 }

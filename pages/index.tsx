@@ -3,6 +3,7 @@ import type { NextPage } from 'next';
 import { useState } from 'react';
 import Button from '../components/button';
 import Textarea from '../components/textarea';
+import basePath from '../lib/basePath';
 import cssToJs from '../lib/csstojs';
 
 const Home: NextPage = () => {
@@ -11,9 +12,15 @@ const Home: NextPage = () => {
   return (
     <div className="cont">
       <div className="cont_inner">
+        <img className="bg-img" src={basePath + 'bg.jpg'} alt="bg-image" />
         <Header size={'lg'}>CSS to JS Converter</Header>
         <div className="convert">
-          <Textarea spellCheck={false} state={css} />
+          <Textarea
+            spellCheck={false}
+            state={css}
+            title={'Your CSS'}
+            placeholder={'type or paste your css here'}
+          />
           <div>
             <Button
               handler={() => {
@@ -29,8 +36,22 @@ const Home: NextPage = () => {
             >
               Copy
             </Button>
+            <Button
+              handler={() => {
+                css[1]('');
+                js[1]('');
+              }}
+            >
+              Clear
+            </Button>
           </div>
-          <Textarea state={js} spellCheck={false} />
+          <Textarea
+            state={js}
+            spellCheck={false}
+            fixed={true}
+            title={'Converted JS'}
+            placeholder={'click on convert button to see converted js here'}
+          />
         </div>
       </div>
     </div>

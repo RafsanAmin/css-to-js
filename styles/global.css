@@ -24,6 +24,15 @@
   padding: 1rem 0;
   gap: 10px;
 }
+.bg-img {
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -5;
+  opacity: 0.2;
+}
 @media only screen and (max-width: 720px) {
   .convert {
     display: flex;
