@@ -1,5 +1,4 @@
 import Styles from '@style/dragndrop.module.css';
-import { Blob } from 'buffer';
 import React, { FC, useRef, useState } from 'react';
 
 const DragNdrop: FC = () => {
@@ -28,8 +27,8 @@ const DragNdrop: FC = () => {
           sd(false);
           const files = e.dataTransfer.files[0];
 
-          if (files.type !== 'image/png') {
-            alert(files instanceof Blob);
+          if (files.type !== 'image/png' && files.type !== 'image/jpeg') {
+            alert('lol');
           } else {
             const r = new FileReader();
             r.readAsDataURL(files);
